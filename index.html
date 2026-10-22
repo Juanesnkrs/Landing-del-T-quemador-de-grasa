@@ -97,87 +97,112 @@
     </header>
 
     <!-- HERO SECTION -->
+    <!-- CÓDIGO ACTUALIZADO PARA LA SECCIÓN HERO -->
     <section
-        class="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden bg-gradient-to-b from-white via-emeraldBrand-50/30 to-slate-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
+        class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 bg-gradient-to-b from-emerald-50/50 via-white to-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-                <!-- Hero Content Left -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <!-- COLUMNA CONTENIDO -->
+                <div class="lg:col-span-7 flex flex-col text-center lg:text-left">
+
+                    <!-- 1. BADGE (ORDEN 1 EN MÓVIL) -->
                     <div
-                        class="inline-flex items-center gap-2 bg-emeraldBrand-100/80 border border-emeraldBrand-200 text-emeraldBrand-800 text-xs sm:text-sm font-semibold px-3.5 py-1.5 rounded-full">
-                        <i class="fas fa-leaf text-emeraldBrand-600"></i>
+                        class="order-1 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100/80 text-emerald-800 text-xs sm:text-sm font-semibold w-max mx-auto lg:mx-0 mb-4 border border-emerald-200">
+                        <i class="fa-solid fa-leaf text-emerald-600"></i>
                         Fórmula Termogénica 100% Natural
                     </div>
 
+                    <!-- 2. TÍTULO (ORDEN 2 EN MÓVIL) -->
                     <h1
-                        class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                        class="order-2 text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
                         Pierde hasta <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-emeraldBrand-600 to-teal-500">4
-                            kg en 2 meses</span> tomando solo 2 tazas al día
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">4 kg en
+                            2 meses</span> tomando solo 2 tazas al día
                     </h1>
 
-                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    <!-- 3. PÁRRAFO DESCRIPTIVO (ORDEN 3 EN MÓVIL) -->
+                    <p
+                        class="order-3 text-base sm:text-lg text-slate-600 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0">
                         Acelera tu metabolismo de forma segura, elimina la retención de líquidos y controla los antojos.
                         Todo sin efecto rebote ni dietas extremas.
                     </p>
 
-                    <!-- Trust Points -->
-                    <div
-                        class="grid grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-xs sm:text-sm font-medium text-slate-700">
+                    <!-- 4. IMAGEN DEL PRODUCTO EN MÓVIL (ORDEN 4 EN MÓVIL, OCULTA EN WEB) -->
+                    <div class="order-4 lg:hidden mb-8 relative max-w-sm mx-auto">
                         <div
-                            class="flex items-center justify-center lg:justify-start gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
-                            <i class="fas fa-check-circle text-emeraldBrand-500"></i>
+                            class="absolute inset-0 bg-gradient-to-tr from-emerald-200 to-teal-100 rounded-3xl transform rotate-3 scale-95 blur-lg opacity-70">
+                        </div>
+                        <div
+                            class="relative bg-white/60 backdrop-blur-sm p-4 rounded-3xl border border-emerald-100 shadow-xl">
+                            <img src="images/teherbal.png" alt="Té Quemador de Grasa Herbalife / Life Nutrition"
+                                class="w-full h-auto object-contain drop-shadow-md max-h-64 mx-auto">
+
+                            <!-- Mini Badge de Rating en Móvil -->
+                            <div
+                                class="mt-3 flex items-center justify-center gap-2 bg-white/90 py-1.5 px-3 rounded-full border border-slate-100 shadow-sm text-xs">
+                                <span class="font-bold text-amber-500">⭐ 4.9</span>
+                                <span class="text-slate-300">•</span>
+                                <span class="text-slate-600 font-medium">+1,200 Clientes Felices</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. TRUSTPOINTS (ORDEN 5 EN MÓVIL) -->
+                    <div class="order-5 grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+                        <div
+                            class="flex items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-slate-700 bg-white/80 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                            <i class="fa-solid fa-circle-check text-emerald-500"></i>
                             <span>Sin efecto rebote</span>
                         </div>
                         <div
-                            class="flex items-center justify-center lg:justify-start gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
-                            <i class="fas fa-fire text-amber-500"></i>
+                            class="flex items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-slate-700 bg-white/80 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                            <i class="fa-solid fa-bolt text-emerald-500"></i>
                             <span>Energía natural</span>
                         </div>
                         <div
-                            class="flex items-center justify-center lg:justify-start gap-1.5 bg-white p-2.5 rounded-xl border border-slate-200/80 shadow-sm">
-                            <i class="fas fa-shield-alt text-blue-500"></i>
+                            class="flex items-center justify-center lg:justify-start gap-2 text-xs font-semibold text-slate-700 bg-white/80 p-2.5 rounded-xl border border-slate-100 shadow-sm">
+                            <i class="fa-solid fa-shield-halved text-emerald-500"></i>
                             <span>Aprobado y Seguro</span>
                         </div>
                     </div>
 
-                    <!-- Call to Action -->
-                    <div class="pt-4 space-y-3">
+                    <!-- 6. BOTÓN CTA PRINCIPAL (ORDEN 6 EN MÓVIL) -->
+                    <div class="order-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                         <a href="https://api.whatsapp.com/send?phone=573208784337&text=Hola,%20quiero%20pedir%20mi%20Té%20Quemador%20de%20Grasa!"
                             target="_blank" rel="noopener"
-                            class="pulse-subtle inline-flex items-center justify-center gap-3 w-full sm:w-auto bg-emeraldBrand-600 hover:bg-emeraldBrand-700 text-white font-heading font-bold text-lg px-8 py-4 rounded-2xl transition-all shadow-lg shadow-emeraldBrand-600/30">
-                            <i class="fab fa-whatsapp text-2xl"></i>
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg shadow-lg shadow-emerald-600/30 hover:shadow-emerald-600/50 hover:-translate-y-0.5 transition-all duration-200">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
                             <span>PEDIR MI TÉ POR WHATSAPP</span>
                         </a>
-                        <p class="text-xs text-slate-500 flex items-center justify-center lg:justify-start gap-2">
-                            <i class="fas fa-lock text-slate-400"></i>
-                            Respuesta inmediata • Asesores disponibles por WhatsApp
-                        </p>
                     </div>
+                    <p
+                        class="order-7 text-xs text-slate-400 mt-3 flex items-center justify-center lg:justify-start gap-1.5">
+                        <i class="fa-solid fa-clock text-emerald-500"></i>
+                        Respuesta inmediata • Asesores disponibles por WhatsApp
+                    </p>
                 </div>
 
-                <!-- Hero Image Right -->
-                <div class="lg:col-span-5 relative">
+                <!-- COLUMNA IMAGEN ESCRITORIO (SOLO VISIBLE EN LAG/DESKTOP - HIDDEN EN MÓVIL) -->
+                <div class="hidden lg:block lg:col-span-5 relative">
                     <div
-                        class="absolute inset-0 bg-gradient-to-tr from-emeraldBrand-400/20 to-amber-300/20 rounded-3xl filter blur-2xl -z-10">
+                        class="absolute inset-0 bg-gradient-to-tr from-emerald-300 to-teal-100 rounded-3xl transform rotate-3 scale-95 blur-xl opacity-60">
                     </div>
                     <div
-                        class="relative bg-white/60 backdrop-blur-sm p-4 sm:p-6 rounded-3xl border border-white shadow-xl">
+                        class="relative bg-white/80 backdrop-blur-sm p-6 rounded-3xl border border-emerald-100 shadow-2xl">
                         <img src="images/teherbal.png" alt="Té Quemador de Grasa Herbalife / Life Nutrition"
-                            onerror="this.onerror=null; this.src='https://placehold.co/500x500/059669/ffffff?text=T%C3%A9+Quemador+de+Grasa';"
-                            class="w-full h-auto max-h-[420px] object-contain mx-auto drop-shadow-xl hover:scale-105 transition-transform duration-300">
+                            class="w-full h-auto object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300">
 
-                        <!-- Floating Highlight Badge -->
+                        <!-- Card flotante de prueba social en versión Web -->
                         <div
-                            class="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-4 bg-white border border-slate-100 shadow-xl rounded-2xl p-3 flex items-center gap-3 min-w-[240px]">
+                            class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce-slow">
                             <div
-                                class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 font-bold">
+                                class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">
                                 ⭐ 4.9
                             </div>
                             <div>
                                 <p class="text-xs font-bold text-slate-800">+1,200 Clientes Felices</p>
-                                <p class="text-[11px] text-slate-500">Resultados desde la semana 1</p>
+                                <p class="text-[10px] text-slate-500">Resultados desde la semana 1</p>
                             </div>
                         </div>
                     </div>

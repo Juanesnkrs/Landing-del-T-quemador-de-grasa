@@ -68,33 +68,45 @@
 
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-emeraldBrand-500 selection:text-white">
 
-    <!-- TOP ANNOUNCEMENT BAR -->
-    <div
-        class="bg-gradient-to-r from-emeraldBrand-900 via-emeraldBrand-800 to-emeraldBrand-900 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium shadow-sm flex items-center justify-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        <span>🔥 <strong>OFERTA ESPECIAL:</strong> Envíos con pago contraentrega disponibles hoy en Colombia</span>
+
+    <!-- CONTENEDOR FIJO PARA MÓVIL Y WEB (TOP ANNOUNCEMENT BAR + HEADER) -->
+    <div class="fixed top-0 left-0 w-full z-50 shadow-sm">
+
+        <!-- TOP ANNOUNCEMENT BAR -->
+        <div
+            class="bg-slate-900 text-white text-[11px] sm:text-sm font-medium py-2 px-3 sm:px-4 text-center border-b border-emerald-500/30">
+            <div class="max-w-7xl mx-auto flex items-center justify-center gap-1.5 sm:gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                <span class="leading-tight">🔥 <strong>OFERTA ESPECIAL:</strong> Envíos con pago contraentrega
+                    disponibles hoy en Colombia</span>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <header class="bg-white/95 backdrop-blur-md border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold text-base sm:text-lg">
+                        🍃
+                    </div>
+                    <span class="font-black text-lg sm:text-xl text-slate-900 tracking-tight">Life<span
+                            class="text-emerald-600">Nutrition</span></span>
+                </div>
+
+                <a href="https://api.whatsapp.com/send?phone=573208784337&text=Hola,%20quiero%20más%20información%20del%20Té%20Quemador%20de%20Grasa!"
+                    target="_blank" rel="noopener"
+                    class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-bold transition-all">
+                    <i class="fa-brands fa-whatsapp text-emerald-600 text-sm sm:text-base"></i>
+                    <span class="hidden sm:inline">Asesoría Personalizada</span>
+                    <span class="sm:hidden text-[11px]">Asesoría</span>
+                </a>
+            </div>
+        </header>
     </div>
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div
-                    class="w-9 h-9 rounded-xl bg-emeraldBrand-600 flex items-center justify-center text-white font-heading font-extrabold text-xl shadow-md">
-                    🍃
-                </div>
-                <span class="font-heading text-xl font-bold tracking-tight text-slate-900">Life<span
-                        class="text-emeraldBrand-600">Nutrition</span></span>
-            </div>
-
-            <a href="https://api.whatsapp.com/send?phone=573208784337&text=Hola,%20quiero%20más%20información%20del%20Té%20Quemador%20de%20Grasa!"
-                target="_blank" rel="noopener"
-                class="hidden sm:inline-flex items-center gap-2 bg-emeraldBrand-50 text-emeraldBrand-700 hover:bg-emeraldBrand-100 font-semibold px-4 py-2 rounded-full border border-emeraldBrand-200 transition-all text-sm">
-                <i class="fab fa-whatsapp text-emeraldBrand-600 text-lg"></i>
-                <span>Asesoría Personalizada</span>
-            </a>
-        </div>
-    </header>
+    <!-- ESPACIADOR OBLIGATORIO: Evita que el Hero quede tapado por el header fijo -->
+    <div class="h-24 sm:h-28"></div>
 
     <!-- HERO SECTION -->
     <!-- CÓDIGO ACTUALIZADO PARA LA SECCIÓN HERO -->

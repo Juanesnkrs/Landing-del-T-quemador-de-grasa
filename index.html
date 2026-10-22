@@ -19,13 +19,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="icons/hierba.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
     <script>document.documentElement.classList.add("js")</script>
+    <!--script src="https://cdn.tailwindcss.com"></script-->
 </head>
 
 <body class="font-sans text-ink bg-white text-[1.0625rem] leading-relaxed overflow-x-hidden">
@@ -47,8 +46,11 @@
             <div
                 class="absolute top-40 -right-20 w-80 h-80 rounded-full bg-citrus/25 blur-3xl animate-drift [animation-delay:-4s]">
             </div>
-            <div class="relative max-w-5xl mx-auto px-5 grid md:grid-cols-[1.15fr_.85fr] gap-10 items-center">
-                <div>
+            <div
+                class="relative max-w-5xl mx-auto px-5 grid gap-8 md:grid-cols-[1.15fr_.85fr] md:gap-x-10 md:gap-y-0 items-center">
+
+                <!-- 1) Título y párrafo (arriba en móvil; columna izquierda arriba en escritorio) -->
+                <div class="md:col-start-1 md:row-start-1 md:self-end">
                     <p
                         class="inline-block bg-white rounded-full px-4 py-1 text-sm font-bold text-leaf shadow animate-pop">
                         🍵 Bebida Herbal Original · Herbalife Nutrition</p>
@@ -57,7 +59,27 @@
                     <p class="mt-5 text-lg text-slate-600 max-w-xl">Té verde y té negro, bajo en calorías, con cafeína
                         natural que estimula temporalmente tu metabolismo. No es magia: es el empujón que acompaña tu
                         buena alimentación y tu rutina de ejercicio.</p>
-                    <ul class="mt-5 flex flex-wrap gap-2 text-sm font-bold">
+                </div>
+
+                <!-- 2) Producto: en móvil queda justo después del párrafo; en escritorio ocupa la columna derecha -->
+                <div class="relative flex justify-center md:col-start-2 md:row-start-1 md:row-span-2 md:self-center">
+                    <img src="images/teherbal.png" alt="Frasco de Bebida Herbal Original Herbalife de 102 g"
+                        fetchpriority="high"
+                        class="relative z-10 max-h-[300px] md:max-h-[400px] w-auto animate-float drop-shadow-2xl">
+                    <span
+                        class="absolute top-2 left-2 md:left-0 z-20 bg-white rounded-full px-3 py-1 text-sm font-bold shadow animate-float [animation-delay:-1s]">🍃
+                        Té verde</span>
+                    <span
+                        class="absolute top-20 right-2 md:top-24 md:right-0 z-20 bg-white rounded-full px-3 py-1 text-sm font-bold shadow animate-float [animation-delay:-2.5s]">🫖
+                        Té negro</span>
+                    <span
+                        class="absolute bottom-4 left-4 md:bottom-6 md:left-2 z-20 bg-lime rounded-full px-3 py-1 text-sm font-bold shadow animate-float [animation-delay:-3.5s]">⚡
+                        Energía</span>
+                </div>
+
+                <!-- 3) Pills, botón y nota (después de la imagen en móvil; columna izquierda abajo en escritorio) -->
+                <div class="md:col-start-1 md:row-start-2 md:self-start md:mt-5">
+                    <ul class="flex flex-wrap gap-2 text-sm font-bold">
                         <li class="bg-white rounded-full px-3 py-1 shadow-sm">✓ Baja en calorías</li>
                         <li class="bg-white rounded-full px-3 py-1 shadow-sm">✓ Libre de gluten</li>
                         <li class="bg-white rounded-full px-3 py-1 shadow-sm">✓ Caliente o fría</li>
@@ -67,19 +89,7 @@
                         empezar hoy →</a>
                     <p class="mt-3 text-sm text-slate-500">Producto Herbalife Nutrition · Distribuidor independiente</p>
                 </div>
-                <div class="relative flex justify-center">
-                    <img src="images/teherbal.png" alt="Frasco de Bebida Herbal Original Herbalife de 102 g"
-                        fetchpriority="high" class="relative z-10 max-h-[400px] w-auto animate-float drop-shadow-2xl">
-                    <span
-                        class="absolute top-2 left-0 z-20 bg-white rounded-full px-3 py-1 text-sm font-bold shadow animate-float [animation-delay:-1s]">🍃
-                        Té verde</span>
-                    <span
-                        class="absolute top-24 right-0 z-20 bg-white rounded-full px-3 py-1 text-sm font-bold shadow animate-float [animation-delay:-2.5s]">🫖
-                        Té negro</span>
-                    <span
-                        class="absolute bottom-6 left-2 z-20 bg-lime rounded-full px-3 py-1 text-sm font-bold shadow animate-float [animation-delay:-3.5s]">⚡
-                        Energía</span>
-                </div>
+
             </div>
         </div>
 
@@ -134,7 +144,7 @@
                     </div>
                     <div
                         class="reveal rounded-3xl bg-deep text-white p-6 shadow-sm hover:-translate-y-1 transition [transition-delay:240ms]">
-                        <h3 class="text-xl font-extrabold text-lime">💪 Lo que lo hace funcionar:</h3>
+                        <h3 class="text-xl font-extrabold text-lime">💪 Lo que lo hace funcionar: tú</h3>
                         <p class="mt-2 text-white/80">Comer mejor, entrenar o ir al gimnasio, dormir bien y ser
                             constante. La bebida te acompaña en ese proceso.</p>
                     </div>
@@ -326,37 +336,32 @@
                         por WhatsApp</button>
                 </form>
             </div>
-
-            <!-- FINAL CTA BANNER -->
-            <div class="py-16 bg-gradient-to-r from-emeraldBrand-800 to-emeraldBrand-900 text-white text-center">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
-                    <h2 class="font-heading text-3xl sm:text-5xl font-extrabold">
-                        ¿Lista para empezar tu transformación hoy?
-                    </h2>
-                    <p class="text-emeraldBrand-100 text-base sm:text-lg max-w-xl mx-auto">
-                        Haz tu pedido ahora por WhatsApp y recibe asesoría nutricional totalmente gratis con tu compra.
-                    </p>
-                    <div>
-                        <a href="https://api.whatsapp.com/send?phone=573208784337&text=Hola,%20quiero%20pedir%20mi%20Té%20Quemador%20de%20Grasa!"
-                            target="_blank" rel="noopener"
-                            class="inline-flex items-center justify-center gap-3 bg-black hover:bg-slate-100 text-emeraldBrand-800 font-heading font-extrabold text-lg px-8 py-4 rounded-2xl transition-all shadow-2xl">
-                            <i class="fab fa-whatsapp text-2xl text-emeraldBrand-600"></i>
-                            <span>SOLICITAR PEDIDO POR WHATSAPP</span>
-                        </a>
-                    </div>
+        </section>
+        <section class="py-16 bg-gradient-to-r from-emeraldBrand-800 to-emeraldBrand-900 text-black text-center">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
+                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold">
+                    ¿Lista para empezar tu transformación hoy?
+                </h2>
+                <p class="text-emeraldBrand-100 text-base sm:text-lg max-w-xl mx-auto">
+                    Haz tu pedido ahora por WhatsApp y recibe asesoría nutricional totalmente gratis con tu compra.
+                </p>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=573208784337&text=Hola,%20quiero%20pedir%20mi%20Té%20Quemador%20de%20Grasa!"
+                        target="_blank" rel="noopener"
+                        class="btn bg-leaf text-white hover:bg-deep inline-flex items-center justify-center gap-3 bg-green hover:bg-slate-100 text-emeraldBrand-800 font-heading font-extrabold text-lg px-8 py-4 rounded-2xl transition-all shadow-2xl">
+                        <i class="fab fa-whatsapp text-2xl text-emeraldBrand-600"></i>
+                        <span>SOLICITAR PEDIDO POR WHATSAPP</span>
+                    </a>
                 </div>
             </div>
-
         </section>
-
-
     </main>
 
     <footer class="bg-[#0d1f17] text-slate-400 text-[.85rem] pt-9 pb-24">
         <div class="max-w-5xl mx-auto px-5 grid gap-3">
-            <p>© <span id="y"></span> Life Nutrition. Negocio independiente de <strong class="text-white">Aris Pérez
-                </strong>, Miembro Independiente de Herbalife Nutrition, ID [ID]. NIT/CC [NÚMERO].
-            <p>Contacto: arisperezzambrano@gmail.com · WhatsApp +573208784337.</p>
+            <p>© <span id="y"></span> Life Nutrition. Negocio independiente de <strong class="text-white">Aris
+                    Pérez</strong>, Miembro Independiente de Herbalife Nutrition, ID [ID]. NIT/CC [NÚMERO].
+            <p>Contacto: arisperezzambrano@gmail.com · WhatsApp +57 320 878 4337.</p>
             </p>
             <p>Herbalife y Bebida Herbal son marcas de Herbalife International. Los productos Herbalife no tienen el
                 propósito de tratar, curar ni prevenir enfermedad alguna. Contienen cafeína. Los resultados varían entre
@@ -376,7 +381,7 @@
     <a data-wa="Hola, quiero más información de la Bebida Herbal Original." href="#" aria-label="Escribir por WhatsApp"
         class="btn fixed right-4 bottom-4 z-40 bg-[#25D366] text-ink shadow-2xl animate-ring">💬 WhatsApp</a>
 
-    <script src="/app.js"></script>
+    <script src="assets/app.js"></script>
 </body>
 
 </html>
